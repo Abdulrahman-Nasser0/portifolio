@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useTimeOut } from '../hooks/use-time-out';
 import { Preloader } from './index';
 
@@ -20,15 +20,37 @@ export function TransitionWrapper({ children, duration = 1000 }) {
     deps: [],
   });
 
+  /** @type {import('framer-motion').Variants} */
+  const pageContentSlideUp = {
+    initial: {
+      y: '100%',
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: { 
+        duration: 0.6, 
+        ease: [0.76, 0, 0.24, 1],
+        delay: 0.1 // Small delay after preloader exits
+      },
+    },
+  };
+
   return (
     <div className='overflow-hidden'>
       <AnimatePresence mode='wait'>
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>
       {!isLoading ? (
-        <div className='min-h-screen bg-white'>
+        <motion.div 
+          className='min-h-screen'
+          variants={pageContentSlideUp}
+          initial='initial'
+          animate='animate'
+        >
           {children}
-        </div>
+        </motion.div>
       ) : null}
     </div>
   );
