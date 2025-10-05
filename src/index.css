@@ -1,1 +1,57 @@
 @import "tailwindcss";
+
+/* Prevent layout shift - always reserve space for scrollbar */
+html {
+  overflow-y: scroll;
+  width: 100vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make sure all containers use full width accounting for scrollbar */
+* {
+  box-sizing: border-box;
+}
+
+/* Custom thin scrollbar for Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(203, 213, 225, 0.6) transparent;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.6);
+  border-radius: 3px;
+  transition: all 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.8);
+}
+
+/* Remove scrollbar buttons/arrows completely */
+::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
