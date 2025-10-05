@@ -5,23 +5,30 @@ import { motion } from 'framer-motion';
 import { Dot } from 'lucide-react';
 
 import { Center } from '../ui/center';
-import { preloaderWords } from './preloader-words';
 import { useDimensions } from '../hooks/use-dimensions';
 import { useTimeOut } from '../hooks/use-time-out';
 import { fade, slideUp } from './variants';
+
+const pageNames = {
+  '/': 'Home',
+  '/about': 'About',
+  '/projects': 'Projects',
+  '/contact': 'Contact'
+};
 
 const MotionComponent = motion(Center);
 
 export function Preloader() {
   const [index, setIndex] = useState(0);
   const { width, height } = useDimensions();
+  const pageName = pageNames[location.pathname] ;
 
   useTimeOut({
     callback: () => {
       setIndex(prevIndex => prevIndex + 1);
     },
     duration: index === 0 ? 500 : 250,
-    deps: [index],
+    deps: [location.pathname],
   });
 
   const initialPath = `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${
@@ -59,7 +66,7 @@ export function Preloader() {
             animate='enter'
           >
             <Dot size={48} className='me-3' />
-            <p>{preloaderWords[index]}</p>
+            <p>{pageName}</p>
           </MotionComponent>
           <motion.svg className='absolute top-0 -z-10 h-[calc(100%+300px)] w-full'>
             <motion.path
