@@ -39,7 +39,7 @@ export function Preloader() {
       y: 0,
       borderRadius: '0px 0px 0 0',
       transition: { 
-        duration: 0.8, 
+        duration: 0.6, 
         ease: [0.76, 0, 0.24, 1],
         borderRadius: { duration: 0.2, delay: 0.2 }
       },
@@ -48,9 +48,9 @@ export function Preloader() {
       y: '-100%',
       borderRadius: '0 0 100px 100px',
       transition: { 
-        duration: 0.8, 
+        duration: 0.6, 
         ease: [0.76, 0, 0.24, 1], 
-        delay: 0.2,
+        delay: 0.1,
         borderRadius: { duration: 0.2 }
       },
     },

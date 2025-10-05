@@ -1,8 +1,8 @@
 export const preloaderWords = [
-  'Hello',
   'Bonjour',
   'Ciao',
   'Olà',
+  'Hello',
   'سلام',
   'やあ',
   'Hallå',

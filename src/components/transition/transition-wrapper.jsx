@@ -6,7 +6,7 @@ import { useTimeOut } from '../hooks/use-time-out';
 import { Preloader } from './index';
 
 /** @param {import('react').PropsWithChildren<{ duration?: number }>} */
-export function TransitionWrapper({ children, duration = 2000 }) {
+export function TransitionWrapper({ children, duration = 1000 }) {
   const [isLoading, setLoading] = useState(true);
 
   useTimeOut({
