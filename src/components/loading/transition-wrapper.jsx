@@ -1,7 +1,5 @@
-'use client';
-
 import { useState } from 'react';
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'motion/react';
 import { useTimeOut } from '../hooks/use-time-out';
 import { Preloader } from './index';
 
@@ -26,7 +24,7 @@ export function TransitionWrapper({ children, duration = 2000 }) {
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>
       {!isLoading ? (
-        <div className='min-h-screen bg-white'>
+        <div className='min-h-screen'>
           {children}
         </div>
       ) : null}

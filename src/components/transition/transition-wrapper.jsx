@@ -1,7 +1,6 @@
-'use client';
-
 import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+// eslint-disable-next-line no-unused-vars
+import { AnimatePresence, motion } from 'motion/react';
 import { useTimeOut } from '../hooks/use-time-out';
 import { Preloader } from './index';
 
@@ -20,7 +19,7 @@ export function TransitionWrapper({ children, duration = 1000 }) {
     deps: [],
   });
 
-  /** @type {import('framer-motion').Variants} */
+  /** @type {Object} */
   const pageContentSlideUp = {
     initial: {
       y: '100%',

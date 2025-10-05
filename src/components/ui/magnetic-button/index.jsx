@@ -1,7 +1,6 @@
-'use client';
-
 import { useRef } from 'react';
-import { motion } from 'framer-motion';
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'motion/react';
 
 import { useMagnetic } from '../../hooks/use-magnetic';
 import { cn } from '../../utils/cn';

@@ -1,7 +1,5 @@
-'use client';
-
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Dot } from 'lucide-react';
 
 import { Center } from '../ui/center';
@@ -31,7 +29,7 @@ export function Preloader() {
     width / 2
   } ${height} 0 ${height}  L0 0`;
 
-  /** @type {import('framer-motion').Variants} */
+  /** @type {Object} */
   const curve = {
     initial: {
       d: initialPath,

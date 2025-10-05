@@ -1,4 +1,4 @@
-/** @type {import('framer-motion').Variants} */
+/** @type {Object} */
 export const slideUp = {
   initial: {
     top: 0,
@@ -9,7 +9,7 @@ export const slideUp = {
   },
 };
 
-/** @type {import('framer-motion').Variants} */
+/** @type {Object} */
 export const fade = {
   initial: {
     opacity: 0,

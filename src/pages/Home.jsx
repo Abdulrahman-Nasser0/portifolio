@@ -1,4 +1,4 @@
-import { TransitionWrapper } from '../components/transition/transition-wrapper';
+import { TransitionWrapper } from '../components/loading/transition-wrapper';
 import { StaggeredSlideUp, ContentSlideUp } from '../components/animation';
 import { MagneticButton } from '../components/ui/magnetic-button';
 

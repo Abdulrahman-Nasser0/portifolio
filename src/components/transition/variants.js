@@ -1,4 +1,4 @@
-/** @type {import('framer-motion').Variants} */
+/** @type {Object} */
 export const slideUp = {
   initial: {
     y: '100vh', // Start completely below screen
@@ -13,7 +13,7 @@ export const slideUp = {
   },
 };
 
-/** @type {import('framer-motion').Variants} */
+/** @type {Object} */
 export const fade = {
   initial: {
     opacity: 0,
