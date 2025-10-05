@@ -10,10 +10,15 @@ function Header() {
           <div className="flex-shrink-0">
             <MagneticButton 
               to="/" 
-              className="text-2xl font-bold  transition-colors"
+              className="flex items-center space-x-3 transition-colors"
               intensity={0.2}
             >
-              Portfolio
+              <img 
+                src="/logo-white.png" 
+                alt="Abdulrahman Nasser Logo" 
+                className="h-8 w-8"
+              />
+             
             </MagneticButton>
           </div>
 
@@ -48,7 +53,7 @@ function Header() {
           <div className="md:hidden">
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+              className="inline-flex items-center justify-center p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
               aria-controls="mobile-menu"
               aria-expanded="false"
             >
@@ -66,21 +71,21 @@ function Header() {
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <MagneticButton
               to="/about"
-              className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className=" block px-3 py-2 rounded-md text-base font-medium transition-colors"
               intensity={0.25}
             >
               About
             </MagneticButton>
             <MagneticButton
               to="/projects"
-              className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className=" block px-3 py-2 rounded-md text-base font-medium transition-colors"
               intensity={0.25}
             >
               Projects
             </MagneticButton>
             <MagneticButton
               to="/contact"
-              className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              className=" block px-3 py-2 rounded-md text-base font-medium transition-colors"
               intensity={0.25}
             >
               Contact

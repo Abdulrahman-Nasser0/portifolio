@@ -4,23 +4,23 @@ function Contact() {
   return (
     <TransitionWrapper>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Get In Touch</h1>
-        <p className="text-lg text-gray-600 mb-8">
+        <h1 className="text-4xl font-bold  mb-8">Get In Touch</h1>
+        <p className="text-lg  mb-8">
           I'd love to hear from you! Feel free to reach out for collaborations or just a friendly hello.
         </p>
         
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Info</h2>
+            <h2 className="text-2xl font-semibold  mb-4">Contact Info</h2>
             <div className="space-y-3">
-              <p className="text-gray-600">📧 your.email@example.com</p>
-              <p className="text-gray-600">📱 +1 (555) 123-4567</p>
-              <p className="text-gray-600">📍 Your City, Country</p>
+              <p className="">📧 your.email@example.com</p>
+              <p className="">📱 +1 (555) 123-4567</p>
+              <p className="">📍 Your City, Country</p>
             </div>
           </div>
           
           <div>
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Send a Message</h2>
+            <h2 className="text-2xl font-semibold  mb-4">Send a Message</h2>
             <form className="space-y-4">
               <input 
                 type="text" 

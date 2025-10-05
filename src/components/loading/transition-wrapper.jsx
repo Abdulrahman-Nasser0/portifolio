@@ -24,7 +24,7 @@ export function TransitionWrapper({ children, duration = 2000 }) {
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>
       {!isLoading ? (
-        <div className='min-h-screen'>
+        <div className=''>
           {children}
         </div>
       ) : null}
