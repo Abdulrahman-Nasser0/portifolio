@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 import NotFound from "./pages/NotFound";
+import { TransitionWrapper } from './components/loading/transition-wrapper';
 
 function App() {
   const router = createBrowserRouter([
@@ -38,9 +39,9 @@ function App() {
     },
   ]);
   return (
-    <>
+    <TransitionWrapper>
       <RouterProvider router={router} />
-    </>
+    </TransitionWrapper>
   )
 }
 
