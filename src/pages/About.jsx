@@ -1,5 +1,4 @@
-import { TransitionWrapper } from '../components/loading/transition-wrapper';
-import { PageTransition } from '../components/transitions';
+import { TransitionWrapper } from '../components/transition/transition-wrapper';
 
 function About() {
   return (
