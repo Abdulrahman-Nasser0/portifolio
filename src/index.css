@@ -6,44 +6,30 @@
   --gray-light: #999d9e;
 }
 
-/* Prevent layout shift - always reserve space for scrollbar */
-
 
 body {
   margin: 0;
   padding: 0;
   width: 100%;
-  background-color: var(--main-black);
   box-sizing: border-box;
+  scrollbar-gutter: stable;
 }
-
 /* Make sure all containers use full width accounting for scrollbar */
 * {
   box-sizing: border-box;
 }
-
-/* Custom thin scrollbar for Firefox */
-
-
 /* Custom scrollbar for Webkit browsers */
 ::-webkit-scrollbar {
   width: 6px;
   background: transparent;
 }
 
-
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(148, 163, 184, 0.8);
-}
-
-/* Remove scrollbar buttons/arrows completely */
-::-webkit-scrollbar-button {
-  display: none;
-  height: 0;
-  width: 0;
-}
-
-::-webkit-scrollbar-corner {
+::-webkit-scrollbar-track {
   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 213, 225, 0.6);
+  border-radius: 3px;
+  transition: background 0.2s ease;
 }
