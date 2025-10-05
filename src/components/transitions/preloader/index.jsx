@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Dot } from 'lucide-react';
 
-import { Center } from '../ui/center';
+import { Center } from '../../ui/center';
 import { preloaderWords } from './preloader-words';
-import { useDimensions } from '../hooks/use-dimensions';
-import { useTimeOut } from '../hooks/use-time-out';
-import { fade, slideUp } from './variants';
+import { useDimensions } from '../../hooks/use-dimensions';
+import { useTimeOut } from '../../hooks/use-time-out';
+import { fade, slideFromBottom } from './variants';
 
 const MotionComponent = motion(Center);
 
@@ -45,26 +45,33 @@ export function Preloader() {
 
   return (
     <MotionComponent
-      className='fixed z-50 h-screen w-screen cursor-wait text-white text-background'
-      variants={slideUp}
+      className='fixed z-50 h-screen w-screen cursor-wait'
+      style={{
+        backgroundColor: '#1F2937', // Dark background - adjust to your theme
+        color: '#FFFFFF', // White text - adjust to your theme
+      }}
+      variants={slideFromBottom}
       initial='initial'
       exit='exit'
     >
       {width > 0 ? (
         <>
           <MotionComponent
-            className='text-3xl md:text-4xl text-background'
+            className='text-3xl md:text-4xl'
+            style={{
+              color: '#FFFFFF', // White text - adjust to your theme
+            }}
             variants={fade}
             initial='initial'
             animate='enter'
           >
-            <Dot size={48} className='me-3' />
+            <Dot size={48} style={{ marginRight: '12px' }} />
             <p>{preloaderWords[index]}</p>
           </MotionComponent>
           <motion.svg className='absolute top-0 -z-10 h-[calc(100%+300px)] w-full'>
             <motion.path
               style={{
-                fill: '#1C1D20',
+                fill: '#1F2937', // Same as background - adjust to your theme
               }}
               variants={curve}
               initial='initial'
