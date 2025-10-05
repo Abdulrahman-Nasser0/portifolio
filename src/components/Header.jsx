@@ -1,41 +1,46 @@
 import { Link } from "react-router-dom";
+import { MagneticButton } from "./ui/magnetic-button";
 
 function Header() {
   return (
-    <header className="w-full bg-white shadow-sm">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="w-full">
+      <nav className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Home button */}
           <div className="flex-shrink-0">
-            <Link 
+            <MagneticButton 
               to="/" 
-              className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors"
+              className="text-2xl font-bold  transition-colors"
+              intensity={0.2}
             >
               Portfolio
-            </Link>
+            </MagneticButton>
           </div>
 
           {/* Desktop Navigation Menu */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <Link
+              <MagneticButton
                 to="/about"
-                className="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="px-4 transition-colors"
+                intensity={0.3}
               >
                 About
-              </Link>
-              <Link
+              </MagneticButton>
+              <MagneticButton
                 to="/projects"
-                className="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="px-4 transition-colors"
+                intensity={0.3}
               >
                 Projects
-              </Link>
-              <Link
+              </MagneticButton>
+              <MagneticButton
                 to="/contact"
-                className="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className="px-4 transition-colors"
+                intensity={0.3}
               >
                 Contact
-              </Link>
+              </MagneticButton>
             </div>
           </div>
 
@@ -59,24 +64,27 @@ function Header() {
         {/* Mobile Navigation Menu */}
         <div className="md:hidden" id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link
+            <MagneticButton
               to="/about"
               className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              intensity={0.25}
             >
               About
-            </Link>
-            <Link
+            </MagneticButton>
+            <MagneticButton
               to="/projects"
               className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              intensity={0.25}
             >
               Projects
-            </Link>
-            <Link
+            </MagneticButton>
+            <MagneticButton
               to="/contact"
               className="text-gray-900 hover:text-gray-700 block px-3 py-2 rounded-md text-base font-medium transition-colors"
+              intensity={0.25}
             >
               Contact
-            </Link>
+            </MagneticButton>
           </div>
         </div>
       </nav>

@@ -6,10 +6,40 @@
   --gray-light: #999d9e;
 }
 
+/* Custom easing for animations */
+.ease-in-expo {
+  transition-timing-function: cubic-bezier(0.1, 0, 0.3, 1);
+}
+
+/* Ensure proper pseudo-element styling */
+.before\:content-\[\'\'\]::before {
+  content: '';
+}
+
+.after\:content-\[\'\'\]::after {
+  content: '';
+}
+
+/* Custom transition durations */
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.delay-300 {
+  transition-delay: 300ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
+}
+
+
 
 body {
   margin: 0;
   padding: 0;
+  background-color: var(--gray-light);
+  color: white;
   box-sizing: border-box;
 }
 
