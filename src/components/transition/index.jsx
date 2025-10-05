@@ -5,9 +5,8 @@ import { motion } from 'framer-motion';
 import { Dot } from 'lucide-react';
 
 import { Center } from '../ui/center';
-import { useDimensions } from '../hooks/use-dimensions';
 import { useTimeOut } from '../hooks/use-time-out';
-import { fade, slideUp } from './variants';
+import { fade } from './variants';
 
 const pageNames = {
   '/': 'Home',
@@ -20,8 +19,7 @@ const MotionComponent = motion(Center);
 
 export function Preloader() {
   const [index, setIndex] = useState(0);
-  const { width, height } = useDimensions();
-  const pageName = pageNames[location.pathname] ;
+  const pageName = pageNames[location.pathname];
 
   useTimeOut({
     callback: () => {
@@ -31,55 +29,51 @@ export function Preloader() {
     deps: [location.pathname],
   });
 
-  const initialPath = `M0 0 L${width} 0 L${width} ${height} Q${width / 2} ${
-    height + 300
-  } 0 ${height}  L0 0`;
-  const targetPath = `M0 0 L${width} 0 L${width} ${height} Q${
-    width / 2
-  } ${height} 0 ${height}  L0 0`;
-
   /** @type {import('framer-motion').Variants} */
-  const curve = {
+  const pageTransition = {
     initial: {
-      d: initialPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] },
+      y: '100%',
+      borderRadius: '100px 100px 0 0',
+    },
+    animate: {
+      y: 0,
+      borderRadius: '0px 0px 0 0',
+      transition: { 
+        duration: 0.8, 
+        ease: [0.76, 0, 0.24, 1],
+        borderRadius: { duration: 0.2, delay: 0.2 }
+      },
     },
     exit: {
-      d: targetPath,
-      transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1], delay: 0.3 },
+      y: '-100%',
+      borderRadius: '0 0 100px 100px',
+      transition: { 
+        duration: 0.8, 
+        ease: [0.76, 0, 0.24, 1], 
+        delay: 0.2,
+        borderRadius: { duration: 0.2 }
+      },
     },
   };
 
   return (
-    <MotionComponent
-      className='fixed z-50 h-screen w-screen cursor-wait text-white text-background'
-      variants={slideUp}
+    <motion.div
+      className='fixed inset-0 z-50 flex items-center justify-center cursor-wait text-white'
+      style={{ backgroundColor: '#1C1D20' }}
+      variants={pageTransition}
       initial='initial'
+      animate='animate'
       exit='exit'
     >
-      {width > 0 ? (
-        <>
-          <MotionComponent
-            className='text-3xl md:text-4xl text-background'
-            variants={fade}
-            initial='initial'
-            animate='enter'
-          >
-            <Dot size={48} className='me-3' />
-            <p>{pageName}</p>
-          </MotionComponent>
-          <motion.svg className='absolute top-0 -z-10 h-[calc(100%+300px)] w-full'>
-            <motion.path
-              style={{
-                fill: '#1C1D20',
-              }}
-              variants={curve}
-              initial='initial'
-              exit='exit'
-            />
-          </motion.svg>
-        </>
-      ) : null}
-    </MotionComponent>
+      <MotionComponent
+        className='text-3xl md:text-4xl text-white'
+        variants={fade}
+        initial='initial'
+        animate='enter'
+      >
+        <Dot size={48} className='me-3' />
+        <p>{pageName}</p>
+      </MotionComponent>
+    </motion.div>
   );
 }

@@ -10,26 +10,34 @@
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-  scrollbar-gutter: stable;
-}
-/* Make sure all containers use full width accounting for scrollbar */
-* {
   box-sizing: border-box;
 }
-/* Custom scrollbar for Webkit browsers */
-::-webkit-scrollbar {
-  width: 6px;
-  background: transparent;
+
+/* Hide scrollbar globally */
+/* Chrome, Safari, Opera */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+/* Firefox */
+html,
+body {
+  scrollbar-width: none;
 }
 
-::-webkit-scrollbar-thumb {
-  background: rgba(203, 213, 225, 0.6);
-  border-radius: 3px;
-  transition: background 0.2s ease;
+/* IE, Edge */
+html,
+body {
+  -ms-overflow-style: none;
+}
+
+/* Keep the original element class for specific elements if needed */
+.element::-webkit-scrollbar {
+  display: none;
+}
+
+.element {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
