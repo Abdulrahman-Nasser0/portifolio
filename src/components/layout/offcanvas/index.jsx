@@ -26,24 +26,34 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
 
       {/* Menu Panel */}
       <motion.div
-        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[50%] bg-[var(--main-black)] text-white z-50 flex flex-col"
+        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[50%] bg-[var(--main-black)] text-white z-50 flex flex-col overflow-hidden"
         variants={slideLeft}
         initial="initial"
         animate="enter"
         exit="exit"
       >
         {/* Header */}
-        <div className="flex justify-center items-center p-6 border-b border-gray-700">
-          <h2 className="text-xl font-bold">Navigation</h2>
+        <div className="flex-shrink-0 flex mt-10 p-6 border-b border-gray-700">
+          <h2 className="text-sm text-gray-400 uppercase">Navigation</h2>
         </div>
-        <div className="py-[15vh] px-[7.5vw] pb-[10vh]">
-          {/* Body */}
-          <div className="flex-1 scrollbar-hide ">
-            <MenuBody onLinkClick={handleLinkClick} />
-          </div>
+        
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto scrollbar-hide"
+             style={{
+               scrollbarWidth: 'none', /* Firefox */
+               msOverflowStyle: 'none', /* Internet Explorer 10+ */
+             }}>
+          <div className="py-[15vh] px-[7.5vw] pb-[10vh] min-h-full flex flex-col">
+            {/* Body */}
+            <div className="flex-1">
+              <MenuBody onLinkClick={handleLinkClick} />
+            </div>
 
-          {/* Footer */}
-          <MenuFooter />
+            {/* Footer */}
+            <div className="mt-auto">
+              <MenuFooter />
+            </div>
+          </div>
         </div>
       </motion.div>
     </>
