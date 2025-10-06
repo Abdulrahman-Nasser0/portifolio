@@ -36,7 +36,7 @@ export function FloatingMenuButton({ isMenuOpen, onToggle }) {
   return (
     <motion.button
       ref={elementRef}
-      className="fixed top-6 right-6 z-50 w-14 h-14 bg-[var(--main-black)] border border-white/20 rounded-full flex items-center justify-center cursor-pointer hover:bg-white/10 transition-colors shadow-lg backdrop-blur-sm"
+      className={`fixed top-6 right-6 ${isMenuOpen ? 'z-[60]' : 'z-50'} w-16 h-16  rounded-full flex items-center justify-center cursor-pointer  transition-colors shadow-lg bg-gray-900 text-white before:bg-blue-600 after:bg-blue-600`}
       onClick={onToggle}
       initial={{ opacity: 0, scale: 0, y: -20 }}
       animate={{ 
@@ -66,30 +66,20 @@ export function FloatingMenuButton({ isMenuOpen, onToggle }) {
         <div className="w-6 h-6 flex flex-col justify-center items-center relative">
           {/* Top line */}
           <motion.span
-            className="block w-6 h-0.5 bg-white absolute"
+            className="block w-5 h-0.5 bg-white absolute rounded-full"
             animate={{
               rotate: isMenuOpen ? 45 : 0,
-              y: isMenuOpen ? 0 : -4,
-            }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          />
-          
-          {/* Middle line */}
-          <motion.span
-            className="block w-6 h-0.5 bg-white absolute"
-            animate={{
-              opacity: isMenuOpen ? 0 : 1,
-              scaleX: isMenuOpen ? 0 : 1,
+              y: isMenuOpen ? 0 : -3,
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           />
           
           {/* Bottom line */}
           <motion.span
-            className="block w-6 h-0.5 bg-white absolute"
+            className="block w-5 h-0.5 bg-white absolute rounded-full"
             animate={{
               rotate: isMenuOpen ? -45 : 0,
-              y: isMenuOpen ? 0 : 4,
+              y: isMenuOpen ? 0 : 3,
             }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
           />
