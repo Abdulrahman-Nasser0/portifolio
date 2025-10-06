@@ -1,9 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
-import { X } from "lucide-react";
 import { MenuBody } from "./components/body";
 import { MenuFooter } from "./components/footer";
-import { MagneticButton } from "../../ui/magnetic-button";
 import { slideLeft, opacity } from "./variants";
 
 export function Offcanvas({ isOpen, onClose, onNavigate }) {
@@ -18,7 +16,7 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
     <>
       {/* Backdrop */}
       <motion.div
-        className="fixed inset-0 bg-opacity-50 z-40"
+        className="fixed inset-0 bg-opacity-50 z-10"
         variants={opacity}
         initial="initial"
         animate="enter"
@@ -35,15 +33,8 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
         exit="exit"
       >
         {/* Header */}
-        <div className="flex justify-between items-center p-6 border-b border-gray-700">
+        <div className="flex justify-center items-center p-6 border-b border-gray-700">
           <h2 className="text-xl font-bold">Navigation</h2>
-          <MagneticButton
-            onClick={onClose}
-            className="p-2 hover:bg-gray-800 rounded-full transition-colors"
-            variant="primary"
-          >
-            <X size={24} />
-          </MagneticButton>
         </div>
         <div className="py-[15vh] px-[7.5vw] pb-[10vh]">
           {/* Body */}
