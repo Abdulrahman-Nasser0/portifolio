@@ -36,7 +36,7 @@ export function FloatingMenuButton({ isMenuOpen, onToggle }) {
   return (
     <motion.button
       ref={elementRef}
-      className={`fixed top-6 right-6 ${isMenuOpen ? 'z-[60]' : 'z-50'} w-16 h-16  rounded-full flex items-center justify-center cursor-pointer  transition-colors shadow-lg bg-gray-900 text-white before:bg-blue-600 after:bg-blue-600`}
+      className={`fixed top-6 right-6 ${isMenuOpen ? 'z-[60]' : 'z-50'} w-16 h-16 flex items-center justify-center cursor-pointer rounded-full transition-all duration-300 bg-gray-900 hover:bg-blue-600 text-white shadow-lg`}
       onClick={onToggle}
       initial={{ opacity: 0, scale: 0, y: -20 }}
       animate={{ 
@@ -62,7 +62,7 @@ export function FloatingMenuButton({ isMenuOpen, onToggle }) {
       onPointerOut={handleMagneticOut}
       whileHover={{ scale: 1.1 }}
     >
-      <span className="relative z-1 block w-max">
+      <span className="relative z-10 block w-max">
         <div className="w-6 h-6 flex flex-col justify-center items-center relative">
           {/* Top line */}
           <motion.span
