@@ -24,7 +24,7 @@ export function NavigationLinks({ onLinkClick }) {
   };
 
   return (
-    <nav className="flex flex-col gap-8 items-start ">
+    <nav className="flex flex-col gap-8 items-start">
       {navItems.map((data, index) => {
         const active = isActive(data.href);
         const showDot = active || hoveredIndex === index;
@@ -39,31 +39,43 @@ export function NavigationLinks({ onLinkClick }) {
             exit="exit"
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
-            style={{ width: 'fit-content' }}
+            className="relative w-full md:w-fit"
           >
+            {/* Desktop dot - positioned relative to button */}
+            <motion.span
+              className="absolute -left-8 top-1/2 -translate-y-1/2 rounded-full bg-white w-[1rem] h-[1rem] hidden md:block"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: showDot ? 1 : 0,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 25,
+              }}
+            />
+            
+            {/* Mobile dot - positioned at far right of container */}
+            <motion.span
+              className="absolute right-0 top-1/2 -translate-y-1/2 rounded-full bg-white w-[1rem] h-[1rem] md:hidden"
+              initial={{ scale: 0 }}
+              animate={{
+                scale: showDot ? 1 : 0,
+              }}
+              transition={{
+                type: 'spring',
+                stiffness: 400,
+                damping: 25,
+              }}
+            />
+            
             <MagneticButton
-              href={data.href}
               onClick={(e) => {
                 e.preventDefault();
                 onLinkClick?.(data.href);
               }}
-              intensity={0.2}
-              className="relative text-6xl md:text-7xl transition-colors duration-300 group pl-8"
+              className="relative !text-6xl md:text-7xl transition-colors duration-300 group md:pl-8"
             >
-              {/* Animated Dot Indicator - Absolutely Positioned */}
-              <motion.span
-                className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white"
-                initial={{ scale: 0 }}
-                animate={{
-                  scale: showDot ? 1 : 0,
-                }}
-                transition={{
-                  type: 'spring',
-                  stiffness: 400,
-                  damping: 25,
-                }}
-                style={{ width: '1rem', height: '1rem' }}
-              />
               {data.title}
             </MagneticButton>
           </motion.div>

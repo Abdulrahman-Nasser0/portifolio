@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
-import { X } from 'lucide-react';
-import { MenuBody } from './components/body';
-import { MenuFooter } from './components/footer';
-import { MagneticButton } from '../../ui/magnetic-button';
-import { slideLeft, opacity } from './variants';
+import { motion } from "motion/react";
+import { X } from "lucide-react";
+import { MenuBody } from "./components/body";
+import { MenuFooter } from "./components/footer";
+import { MagneticButton } from "../../ui/magnetic-button";
+import { slideLeft, opacity } from "./variants";
 
 export function Offcanvas({ isOpen, onClose, onNavigate }) {
   const handleLinkClick = (href) => {
@@ -28,7 +28,7 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
 
       {/* Menu Panel */}
       <motion.div
-        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[30%] bg-[var(--main-black)] text-white z-50 flex flex-col"
+        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[50%] bg-[var(--main-black)] text-white z-50 flex flex-col"
         variants={slideLeft}
         initial="initial"
         animate="enter"
@@ -44,17 +44,15 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
           >
             <X size={24} />
           </MagneticButton>
-          
         </div>
-        <div className='py-[15vh] px-[7.5vw] pb-[10vh]'>
+        <div className="py-[15vh] px-[7.5vw] pb-[10vh]">
+          {/* Body */}
+          <div className="flex-1 scrollbar-hide ">
+            <MenuBody onLinkClick={handleLinkClick} />
+          </div>
 
-        {/* Body */}
-        <div className="flex-1 overflow-y-auto scrollbar-hide">
-          <MenuBody onLinkClick={handleLinkClick} />
-        </div>
-
-        {/* Footer */}
-        <MenuFooter />
+          {/* Footer */}
+          <MenuFooter />
         </div>
       </motion.div>
     </>
