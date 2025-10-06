@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import { slide } from './variants';
+import { MagneticButton } from '../../../../../ui/magnetic-button';
 
 const navItems = [
   { title: 'Home', href: '/' },
@@ -10,34 +13,62 @@ const navItems = [
 ];
 
 export function NavigationLinks({ onLinkClick }) {
+  const location = useLocation();
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const isActive = (href) => {
+    if (href === '/') {
+      return location.pathname === '/';
+    }
+    return location.pathname.startsWith(href);
+  };
+
   return (
-    <div className="flex flex-col gap-3">
-      {navItems.map((data, index) => (
-        <motion.div
-          key={index}
-          custom={index}
-          variants={slide}
-          initial="initial"
-          animate="enter"
-          exit="exit"
-        >
-          <a
-            href={data.href}
-            onClick={(e) => {
-              e.preventDefault();
-              onLinkClick?.(data.href);
-            }}
-            className="relative text-6xl md:text-8xl font-light text-white hover:text-gray-300 transition-colors duration-300 overflow-hidden group"
+    <nav className="flex flex-col gap-8 items-start ">
+      {navItems.map((data, index) => {
+        const active = isActive(data.href);
+        const showDot = active || hoveredIndex === index;
+
+        return (
+          <motion.div
+            key={index}
+            custom={index}
+            variants={slide}
+            initial="initial"
+            animate="enter"
+            exit="exit"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            style={{ width: 'fit-content' }}
           >
-            <span className="block transform transition-transform duration-300 group-hover:-translate-y-full">
+            <MagneticButton
+              href={data.href}
+              onClick={(e) => {
+                e.preventDefault();
+                onLinkClick?.(data.href);
+              }}
+              intensity={0.2}
+              className="relative text-6xl md:text-7xl transition-colors duration-300 group pl-8"
+            >
+              {/* Animated Dot Indicator - Absolutely Positioned */}
+              <motion.span
+                className="absolute left-0 top-1/2 -translate-y-1/2 rounded-full bg-white"
+                initial={{ scale: 0 }}
+                animate={{
+                  scale: showDot ? 1 : 0,
+                }}
+                transition={{
+                  type: 'spring',
+                  stiffness: 400,
+                  damping: 25,
+                }}
+                style={{ width: '1rem', height: '1rem' }}
+              />
               {data.title}
-            </span>
-            <span className="absolute top-full left-0 transform transition-transform duration-300 group-hover:-translate-y-full text-blue-400">
-              {data.title}
-            </span>
-          </a>
-        </motion.div>
-      ))}
-    </div>
+            </MagneticButton>
+          </motion.div>
+        );
+      })}
+    </nav>
   );
 }

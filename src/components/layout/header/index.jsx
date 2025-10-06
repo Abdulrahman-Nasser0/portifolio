@@ -1,29 +1,39 @@
-
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
-import { Menu } from 'lucide-react';
-import { MagneticButton } from '../../ui/magnetic-button';
+import { motion } from "motion/react";
+import { Menu } from "lucide-react";
+import { MagneticButton } from "../../ui/magnetic-button";
 
 export function Header({ onMenuToggle, isMenuOpen }) {
   return (
-    <header
-      className="w-full px-4"
-    >
+    <header className="w-full px-4">
       <nav className="">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Home button */}
+
           <div className="flex-shrink-0">
-            <MagneticButton 
-              to="/" 
+            <MagneticButton variant="primary" size="xl">
+              Primary XL
+            </MagneticButton>
+
+            {/* Destructive variant */}
+            <MagneticButton variant="destructive" size="md">
+              Delete Item
+            </MagneticButton>
+
+            {/* Secondary variant */}
+            <MagneticButton variant="secondary" size="md">
+              Secondary Action
+            </MagneticButton>
+            <MagneticButton
+              to="/"
               className="flex items-center space-x-3 transition-colors"
               intensity={0.2}
             >
-              <img 
-                src="/logo-white.png" 
-                alt="Abdulrahman Nasser Logo" 
+              <img
+                src="/logo-white.png"
+                alt="Abdulrahman Nasser Logo"
                 className="h-8 w-8"
               />
-             
             </MagneticButton>
           </div>
 
@@ -34,6 +44,7 @@ export function Header({ onMenuToggle, isMenuOpen }) {
                 to="/about"
                 className="px-4 transition-colors"
                 intensity={0.3}
+                variant="ghost"
               >
                 About
               </MagneticButton>
@@ -41,6 +52,7 @@ export function Header({ onMenuToggle, isMenuOpen }) {
                 to="/projects"
                 className="px-4 transition-colors"
                 intensity={0.3}
+                variant="primary"
               >
                 Projects
               </MagneticButton>
@@ -64,7 +76,7 @@ export function Header({ onMenuToggle, isMenuOpen }) {
               <span className="sr-only">Open main menu</span>
               <Menu size={20} />
               <span className="ml-2 text-sm font-medium">
-                {isMenuOpen ? 'Close' : 'Menu'}
+                {isMenuOpen ? "Close" : "Menu"}
               </span>
             </MagneticButton>
           </div>

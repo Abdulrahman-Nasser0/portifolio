@@ -27,6 +27,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen">
+      
       <Header onMenuToggle={handleMenuToggle} isMenuOpen={isMenuOpen} />
       <main>
         <Outlet />

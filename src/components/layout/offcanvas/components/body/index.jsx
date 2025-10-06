@@ -12,10 +12,8 @@ export function MenuBody({ onLinkClick }) {
       animate="enter"
     >
       {/* Navigation Links */}
-      <div className="flex-1 flex items-center justify-center">
-        <nav className="text-center">
+      <div className="">
           <NavigationLinks onLinkClick={onLinkClick} />
-        </nav>
       </div>
 
       {/* Additional content can go here */}

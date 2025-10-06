@@ -18,7 +18,7 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
     <>
       {/* Backdrop */}
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-50 z-40"
+        className="fixed inset-0 bg-opacity-50 z-40"
         variants={opacity}
         initial="initial"
         animate="enter"
@@ -28,7 +28,7 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
 
       {/* Menu Panel */}
       <motion.div
-        className="fixed top-0 right-0 h-full w-full md:w-2/3 lg:w-1/2 bg-gray-900 text-white z-50 flex flex-col"
+        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[30%] bg-[var(--main-black)] text-white z-50 flex flex-col"
         variants={slideLeft}
         initial="initial"
         animate="enter"
@@ -40,18 +40,22 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
           <MagneticButton
             onClick={onClose}
             className="p-2 hover:bg-gray-800 rounded-full transition-colors"
+            variant="primary"
           >
             <X size={24} />
           </MagneticButton>
+          
         </div>
+        <div className='py-[15vh] px-[7.5vw] pb-[10vh]'>
 
         {/* Body */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto scrollbar-hide">
           <MenuBody onLinkClick={handleLinkClick} />
         </div>
 
         {/* Footer */}
         <MenuFooter />
+        </div>
       </motion.div>
     </>
   );
