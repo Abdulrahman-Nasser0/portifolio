@@ -35,13 +35,48 @@
 
 
 
-body {
-  margin: 0;
-  padding: 0;
-  background-color: var(--gray-light);
-  color: white;
+
+
+/* Global styles */
+* {
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: var(--gray-light);
+  box-sizing: border-box;
+  color: white;
+}
+
+/* Custom scrollbar for menu */
+.offcanvas-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.offcanvas-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.offcanvas-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 2px;
+}
+
+.offcanvas-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+
+
+
+
 
 /* Hide scrollbar globally */
 /* Chrome, Safari, Opera */

@@ -70,10 +70,10 @@ export function MagneticButton({
     );
   }
 
-  // If it's just a button/div
+  // If it's just a button/div with onClick
   return (
-    <motion.div {...motionProps}>
+    <motion.button {...motionProps}>
       {children}
-    </motion.div>
+    </motion.button>
   );
 }
