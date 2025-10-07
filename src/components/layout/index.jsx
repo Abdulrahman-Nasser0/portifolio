@@ -4,7 +4,6 @@ import { AnimatePresence } from 'motion/react';
 import { Header } from './header';
 import { Offcanvas } from './offcanvas';
 import { FloatingMenuButton } from '../ui/floating-menu-button';
-import { InteractiveCursor } from '../ui/interactive-cursor';
 import { useLenis } from "../hooks/use-lenis";
 
 function Layout() {
@@ -37,9 +36,6 @@ function Layout() {
 
   return (
     <div className="min-h-screen">
-      {/* Interactive Cursor */}
-      <InteractiveCursor />
-      
       <Header onMenuToggle={handleMenuToggle} />
       <main>
         <Outlet />

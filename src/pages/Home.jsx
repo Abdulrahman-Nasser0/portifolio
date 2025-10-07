@@ -5,7 +5,6 @@ import { ImageWithLoader } from '../components/ui/image-with-loader';
 import { AnimatedBackground } from '../components/ui/animated-background';
 import { ParallaxElements } from '../components/ui/parallax-elements';
 import { AnimatedText } from '../components/ui/animated-text';
-import { MouseFollowElements } from '../components/ui/mouse-follow-elements';
 import { TypingEffect } from '../components/ui/typing-effect';
 
 function Home() {
@@ -17,8 +16,6 @@ function Home() {
         <AnimatedBackground />
         {/* Parallax Elements */}
         <ParallaxElements />
-        {/* Mouse Follow Elements */}
-        <MouseFollowElements />
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
