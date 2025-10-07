@@ -1,4 +1,3 @@
-import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
@@ -13,16 +12,6 @@ export function AnimatedBackground() {
     duration: Math.random() * 10 + 10,
   }));
 
-  const codeSnippets = [
-    'React',
-    'JavaScript',
-    'CSS3',
-    'HTML5',
-    'Node.js',
-    'TailwindCSS',
-    'MongoDB',
-    'Express',
-  ];
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -80,29 +69,7 @@ export function AnimatedBackground() {
         />
       ))}
 
-      {/* Floating Code Elements */}
-      {codeSnippets.map((snippet, index) => (
-        <motion.div
-          key={snippet}
-          className="absolute text-white/20 font-mono text-sm select-none"
-          style={{
-            left: `${(index * 12 + 10) % 90}%`,
-            top: `${(index * 15 + 20) % 80}%`,
-          }}
-          animate={{
-            y: [0, -20, 0],
-            opacity: [0.1, 0.3, 0.1],
-          }}
-          transition={{
-            duration: 8 + index,
-            delay: index * 0.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        >
-          &lt;{snippet}/&gt;
-        </motion.div>
-      ))}
+      
 
       {/* Large Animated Circles */}
       <motion.div
