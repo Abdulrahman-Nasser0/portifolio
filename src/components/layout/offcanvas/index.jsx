@@ -21,7 +21,7 @@ export function Offcanvas({ isOpen, onClose }) {
 
       {/* Menu Panel */}
       <motion.div
-        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[50%] bg-[var(--main-black)] text-white z-50 flex flex-col overflow-hidden"
+        className="fixed top-0 right-0 h-full w-full md:max-w-[70%] lg:max-w-[50%] bg-[var(--color-text)] text-white z-50 flex flex-col overflow-hidden"
         variants={slideLeft}
         initial="initial"
         animate="enter"
