@@ -11,7 +11,7 @@ export const magneticVariance = cva(
         destructive: 'bg-white text-red-600 before:bg-red-600 after:bg-red-600',
         secondary: 'bg-white text-gray-600 before:bg-gray-200 after:bg-gray-200',
         ghost: 'bg-gray-900 text-white before:bg-blue-600 after:bg-blue-600',
-        outline: 'border border-solid before:bg-blue-600 after:bg-blue-600',
+        outline: 'border border-solid before:bg-[#1C1D20] after:bg-[#1C1D20]',
       },
       size: {
         default: 'p-2 text-sm',
