@@ -17,7 +17,7 @@ function Home() {
         {/* Parallax Elements */}
         <ParallaxElements />
         <div className="max-w-6xl mx-auto relative z-10 pt-16">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div className="grid mt-10 lg:mt-0 lg:grid-cols-2  lg:gap-16 items-center">
             
             {/* Left side - Text Content */}
             <div className="text-center lg:text-left">
@@ -31,7 +31,7 @@ function Home() {
                       delay={0.8}
                     />
                     {/* Animated light line under Abdulrahman */}
-                    <div className="absolute bottom-2 left-0 w-full h-0.5 overflow-hidden">
+                    <div className="absolute bottom-4 left-0 w-full h-0.5 overflow-hidden">
                       <div className="h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-80 animate-[slideLight_3s_ease-in-out_infinite_1.5s]"></div>
                     </div>
                     {/* Additional glow effect */}
@@ -39,7 +39,7 @@ function Home() {
                   </div>
                   <AnimatedText 
                     text="Nasser"
-                    className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 block"
+                    className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 -mt-3 block"
                     delay={1.2}
                   />
                 </div>
