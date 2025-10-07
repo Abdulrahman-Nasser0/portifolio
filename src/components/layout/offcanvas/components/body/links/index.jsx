@@ -24,7 +24,7 @@ export function NavigationLinks({ onMenuClose }) {
   };
 
   return (
-    <nav className="flex flex-col gap-8 items-start">
+    <nav className="flex flex-col gap-4 md:gap-6 items-start">
       {navItems.map((data, index) => {
         const active = isActive(data.href);
         const showDot = active || hoveredIndex === index;
@@ -72,7 +72,7 @@ export function NavigationLinks({ onMenuClose }) {
             <MagneticButton
               to={data.href}
               onClick={onMenuClose}
-              className="relative !text-6xl md:text-7xl transition-colors duration-300 group md:pl-8"
+              className="relative !text-5xl transition-colors duration-300 group md:pl-8"
             >
               {data.title}
             </MagneticButton>

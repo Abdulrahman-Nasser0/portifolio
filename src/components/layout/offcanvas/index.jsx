@@ -38,7 +38,7 @@ export function Offcanvas({ isOpen, onClose }) {
                scrollbarWidth: 'none', /* Firefox */
                msOverflowStyle: 'none', /* Internet Explorer 10+ */
              }}>
-          <div className="py-[15vh] px-[7.5vw] pb-[10vh] min-h-full flex flex-col">
+          <div className="py-[8vh] px-[7.5vw] pb-[10vh] min-h-full flex flex-col">
             {/* Body */}
             <div className="flex-1">
               <MenuBody onMenuClose={onClose} />
