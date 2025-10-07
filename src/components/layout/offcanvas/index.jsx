@@ -4,12 +4,7 @@ import { MenuBody } from "./components/body";
 import { MenuFooter } from "./components/footer";
 import { slideLeft, opacity } from "./variants";
 
-export function Offcanvas({ isOpen, onClose, onNavigate }) {
-  const handleLinkClick = (href) => {
-    onNavigate?.(href);
-    onClose();
-  };
-
+export function Offcanvas({ isOpen, onClose }) {
   if (!isOpen) return null;
 
   return (
@@ -46,7 +41,7 @@ export function Offcanvas({ isOpen, onClose, onNavigate }) {
           <div className="py-[15vh] px-[7.5vw] pb-[10vh] min-h-full flex flex-col">
             {/* Body */}
             <div className="flex-1">
-              <MenuBody onLinkClick={handleLinkClick} />
+              <MenuBody onMenuClose={onClose} />
             </div>
 
             {/* Footer */}

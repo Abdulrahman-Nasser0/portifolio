@@ -3,7 +3,8 @@ import { motion } from "motion/react";
 import { Dot, Menu } from "lucide-react";
 import { MagneticButton } from "../../ui/magnetic-button";
 
-export function Header({ onMenuToggle, isMenuOpen }) {
+export function Header({ onMenuToggle }) {
+
   return (
     <header className="w-full px-4">
       <nav className="">
@@ -13,10 +14,8 @@ export function Header({ onMenuToggle, isMenuOpen }) {
           <div className="flex-shrink-0">
            
             <MagneticButton
-              variant="default"
-              size="default"
               className="flex items-center space-x-3"
-              onClick={() => window.location.href = '/'}
+              to="/"
             >
               <img
                 src="/logo-white.png"
@@ -30,17 +29,17 @@ export function Header({ onMenuToggle, isMenuOpen }) {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               <MagneticButton
-                onClick={() => window.location.href = '/about'}
+                to="/about"
               >
                 About
               </MagneticButton>
               <MagneticButton
-                onClick={() => window.location.href = '/projects'}
+                to="/projects"
               >
                 Projects
               </MagneticButton>
               <MagneticButton
-                onClick={() => window.location.href = '/contact'}
+                to="/contact"
               >
                 Contact
               </MagneticButton>

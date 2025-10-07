@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 function ErrorPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
@@ -10,12 +14,12 @@ function ErrorPage() {
             The page you are looking for might have been removed, had its name changed,
             or is temporarily unavailable.
           </p>
-          <a 
-            href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          <button 
+            onClick={() => navigate('/')}
+            className="bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Go Back Home
-          </a>
+          </button>
         </div>
     </div>
   );

@@ -12,7 +12,7 @@ const navItems = [
   { title: 'Contact', href: '/contact' },
 ];
 
-export function NavigationLinks({ onLinkClick }) {
+export function NavigationLinks({ onMenuClose }) {
   const location = useLocation();
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
@@ -70,10 +70,8 @@ export function NavigationLinks({ onLinkClick }) {
             />
             
             <MagneticButton
-              onClick={(e) => {
-                e.preventDefault();
-                onLinkClick?.(data.href);
-              }}
+              to={data.href}
+              onClick={onMenuClose}
               className="relative !text-6xl md:text-7xl transition-colors duration-300 group md:pl-8"
             >
               {data.title}

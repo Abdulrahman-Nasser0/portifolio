@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { AnimatePresence } from 'motion/react';
 import { Header } from './header';
 import { Offcanvas } from './offcanvas';
@@ -11,7 +11,6 @@ function Layout() {
   useLenis();
   
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const navigate = useNavigate();
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -19,11 +18,6 @@ function Layout() {
 
   const handleMenuClose = () => {
     setIsMenuOpen(false);
-  };
-
-  const handleNavigate = (href) => {
-    navigate(href);
-    handleMenuClose();
   };
 
   // Handle body scroll lock when menu is open
@@ -43,7 +37,7 @@ function Layout() {
   return (
     <div className="min-h-screen">
       
-      <Header onMenuToggle={handleMenuToggle} isMenuOpen={isMenuOpen} />
+      <Header onMenuToggle={handleMenuToggle} />
       <main>
         <Outlet />
       </main>
@@ -59,7 +53,6 @@ function Layout() {
           <Offcanvas
             isOpen={isMenuOpen}
             onClose={handleMenuClose}
-            onNavigate={handleNavigate}
           />
         )}
       </AnimatePresence>

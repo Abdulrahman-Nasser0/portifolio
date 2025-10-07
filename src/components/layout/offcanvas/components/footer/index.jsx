@@ -1,20 +1,42 @@
 
 
 export function MenuFooter() {
+  const handleSocialClick = (platform) => {
+    // Add actual social media URLs here
+    const urls = {
+      instagram: 'https://instagram.com/abdulrahman-nasser',
+      twitter: 'https://twitter.com/abdulrahman-nasser',
+      linkedin: 'https://linkedin.com/in/abdulrahman-nasser'
+    };
+    
+    if (urls[platform]) {
+      window.open(urls[platform], '_blank', 'noopener,noreferrer');
+    }
+  };
+
   return (
     <div className='mt-10 p-6'>
         <span className='text-sm text-gray-400'>Social</span>
       <div className="flex justify-between mt-2 text-sm gap-3 ">
         <div className="flex gap-4">
-          <a href="#" className=" transition-colors">
+          <button 
+            onClick={() => handleSocialClick('instagram')} 
+            className="transition-colors hover:text-white"
+          >
             Instagram
-          </a>
-          <a href="#" className=" transition-colors">
+          </button>
+          <button 
+            onClick={() => handleSocialClick('twitter')} 
+            className="transition-colors hover:text-white"
+          >
             Twitter  
-          </a>
-          <a href="#" className=" transition-colors">
+          </button>
+          <button 
+            onClick={() => handleSocialClick('linkedin')} 
+            className="transition-colors hover:text-white"
+          >
             LinkedIn
-          </a>
+          </button>
         </div>
       </div>
     </div>

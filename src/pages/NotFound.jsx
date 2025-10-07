@@ -1,4 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 function NotFound() {
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="text-center">
@@ -9,12 +13,12 @@ function NotFound() {
           <p className="text-gray-600 mb-8">
             Sorry, we couldn't find the page you're looking for.
           </p>
-          <a 
-            href="/"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+          <button 
+            onClick={() => navigate('/')}
+            className="bg-black hover:bg-gray-800 text-white font-bold py-3 px-6 rounded-lg transition-colors"
           >
             Return Home
-          </a>
+          </button>
         </div>
     </div>
   );

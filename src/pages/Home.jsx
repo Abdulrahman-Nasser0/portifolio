@@ -11,22 +11,7 @@ function Home() {
           <p className="text-lg  mb-6">
             This is the home page with a loading transition.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <MagneticButton 
-              to="/about"               
-              intensity={0.4}
-            >
-              <h2 className="text-xl font-semibold mb-2">About Me</h2>
-              <p className="">Learn more about my background and skills.</p>
-            </MagneticButton>
-            <MagneticButton 
-              to="/projects" 
-              intensity={0.4}
-            >
-              <h2 className="text-xl font-semibold mb-2">My Projects</h2>
-              <p className="">Explore my latest work and projects.</p>
-            </MagneticButton>
-          </div>
+          
         </StaggeredSlideUp>
         
         {/* Demo content for testing scroll behavior */}

@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { NavigationLinks } from './links';
 import { opacity } from './variants';
 
-export function MenuBody({ onLinkClick }) {
+export function MenuBody({ onMenuClose }) {
   return (
     <motion.div
       className="flex flex-col justify-between h-full"
@@ -13,7 +13,7 @@ export function MenuBody({ onLinkClick }) {
     >
       {/* Navigation Links */}
       <div className="">
-          <NavigationLinks onLinkClick={onLinkClick} />
+          <NavigationLinks onMenuClose={onMenuClose} />
       </div>
 
       {/* Additional content can go here */}
