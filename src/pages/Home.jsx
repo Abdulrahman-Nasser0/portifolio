@@ -49,15 +49,14 @@ function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <MagneticButton 
                     to="/projects" 
-                    intensity={0.4}
-                    className="inline-block bg-white  px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+                    variant='outline'
+                    className='text-white p-4'
                   >
                     View My Work
                   </MagneticButton>
                   <MagneticButton 
                     to="/contact" 
-                    intensity={0.4}
-                    className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white transition-colors"
+                    className='text-white p-4'
                   >
                     Get In Touch
                   </MagneticButton>
