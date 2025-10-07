@@ -6,7 +6,7 @@ import { MagneticButton } from "../../ui/magnetic-button";
 export function Header({ onMenuToggle }) {
 
   return (
-    <header className="absolute top-0 left-0 w-full px-4 z-50 text-white">
+    <header className="absolute top-0 left-0 w-full px-4 lg:p-6 z-50 text-white">
       <nav className="">
         <div className="flex justify-between items-center h-16">
           {/* Logo - Home button */}
