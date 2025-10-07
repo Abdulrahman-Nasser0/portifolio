@@ -28,7 +28,7 @@ export function Offcanvas({ isOpen, onClose }) {
         exit="exit"
       >
         {/* Header */}
-        <div className="flex-shrink-0 flex mt-10 p-6 border-b border-gray-700">
+        <div className="flex-shrink-0 flex mt-[5rem] p-6 border-b border-gray-700">
           <h2 className="text-sm text-gray-400 uppercase">Navigation</h2>
         </div>
         
