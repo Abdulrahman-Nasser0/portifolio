@@ -16,7 +16,7 @@ function Home() {
         <AnimatedBackground />
         {/* Parallax Elements */}
         <ParallaxElements />
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10 pt-16">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             
             {/* Left side - Text Content */}
