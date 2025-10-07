@@ -39,27 +39,25 @@ function Home() {
                 <div className="mb-8">
                   <TypingEffect 
                     text="Frontend Developer"
-                    className="text-2xl lg:text-3xl text-blue-400 font-medium mb-4 drop-shadow-lg"
+                    className="text-xl  lg:text-2xl text-white font-light mb-4 tracking-wide"
                     delay={1.8}
                     speed={100}
                   />
-                  <p className="text-lg text-gray-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-                    Passionate about creating beautiful, functional, and user-friendly web experiences with modern technologies.
-                  </p>
+                  
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <MagneticButton 
                     to="/projects" 
                     intensity={0.4}
-                    className="inline-block bg-white text-black px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+                    className="inline-block bg-white  px-8 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors"
                   >
                     View My Work
                   </MagneticButton>
                   <MagneticButton 
                     to="/contact" 
                     intensity={0.4}
-                    className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors"
+                    className="inline-block border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white transition-colors"
                   >
                     Get In Touch
                   </MagneticButton>
@@ -94,7 +92,7 @@ function Home() {
             
             {/* About Preview Section */}
             <section className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">About Me</h2>
+              <h2 className="text-3xl lg:text-4xl font-bold  mb-6">About Me</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 Computer Science student at Assiut University with a passion for frontend development. 
                 I specialize in React, JavaScript, and modern web technologies to create engaging user experiences.
@@ -110,18 +108,18 @@ function Home() {
 
             {/* Skills Preview */}
             <section className="mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-black text-center mb-12">Skills & Technologies</h2>
+              <h2 className="text-3xl lg:text-4xl fon text-center mb-12">Skills & Technologies</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-bold text-black mb-3">Frontend</h3>
+                  <h3 className="text-xl fon mb-3">Frontend</h3>
                   <p className="text-gray-600">React, JavaScript, HTML5, CSS3, TailwindCSS, Vite</p>
                 </div>
                 <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-bold text-black mb-3">Backend</h3>
+                  <h3 className="text-xl fon mb-3">Backend</h3>
                   <p className="text-gray-600">Flask, Laravel, MySQL, PostgreSQL, REST APIs</p>
                 </div>
                 <div className="text-center p-6 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-bold text-black mb-3">Tools & Others</h3>
+                  <h3 className="text-xl fon mb-3">Tools & Others</h3>
                   <p className="text-gray-600">Git, Docker, VS Code, Problem Solving, C++, Java</p>
                 </div>
               </div>
@@ -129,7 +127,7 @@ function Home() {
 
             {/* Projects Preview */}
             <section className="text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold text-black mb-6">Featured Projects</h2>
+              <h2 className="text-3xl lg:text-4xl fon mb-6">Featured Projects</h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
                 Check out some of my recent work including travel booking platforms, 
                 Netflix clones, and productivity applications built with modern technologies.

@@ -50,7 +50,7 @@ function Projects() {
           {/* Header Section */}
           <StaggeredSlideUp staggerDelay={0.15} initialDelay={0.5}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-5xl font-bold text-black mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold  mb-6">
                 My Projects
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -70,7 +70,7 @@ function Projects() {
                   <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                     <div className="mb-4">
                       <span className="text-blue-500 font-medium text-sm">{project.date}</span>
-                      <h2 className="text-2xl lg:text-3xl font-bold text-black mt-2 mb-4">
+                      <h2 className="text-2xl lg:text-3xl font-bold  mt-2 mb-4">
                         {project.title}
                       </h2>
                     </div>
@@ -81,7 +81,7 @@ function Projects() {
                     
                     {/* Technologies */}
                     <div className="mb-6">
-                      <h3 className="text-sm font-medium text-black mb-3">Technologies Used:</h3>
+                      <h3 className="text-sm font-medium  mb-3">Technologies Used:</h3>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, techIndex) => (
                           <span key={techIndex} className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
@@ -93,7 +93,7 @@ function Projects() {
                     
                     {/* Highlights */}
                     <div className="mb-6">
-                      <h3 className="text-sm font-medium text-black mb-3">Key Features:</h3>
+                      <h3 className="text-sm font-medium  mb-3">Key Features:</h3>
                       <ul className="space-y-2">
                         {project.highlights.map((highlight, highlightIndex) => (
                           <li key={highlightIndex} className="flex items-start">
@@ -127,7 +127,7 @@ function Projects() {
           {/* Additional Info Section */}
           <ContentSlideUp delay={1.2}>
             <div className="bg-gray-50 rounded-lg p-8 lg:p-12 text-center">
-              <h2 className="text-2xl lg:text-3xl font-bold text-black mb-6">More Projects Coming Soon</h2>
+              <h2 className="text-2xl lg:text-3xl font-bold  mb-6">More Projects Coming Soon</h2>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                 I'm constantly working on new projects and exploring different technologies. 
                 Check out my GitHub profile to see my latest work and contributions.
@@ -148,7 +148,7 @@ function Projects() {
                 <MagneticButton 
                   to="/contact" 
                   intensity={0.4}
-                  className="inline-block border-2 border-black text-black px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
+                  className="inline-block border-2 border-black  px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
                 >
                   Let's Work Together
                 </MagneticButton>

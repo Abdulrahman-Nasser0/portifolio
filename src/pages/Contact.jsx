@@ -10,7 +10,7 @@ function Contact() {
           {/* Header Section */}
           <StaggeredSlideUp staggerDelay={0.15} initialDelay={0.5}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-5xl font-bold text-black mb-6">Get In Touch</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold  mb-6">Get In Touch</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 I'd love to hear from you! Whether you have a project in mind, want to collaborate, 
                 or just want to say hello, feel free to reach out.
@@ -23,7 +23,7 @@ function Contact() {
               
               {/* Contact Information */}
               <div>
-                <h2 className="text-2xl font-bold text-black mb-8">Contact Information</h2>
+                <h2 className="text-2xl font-bold  mb-8">Contact Information</h2>
                 
                 <div className="space-y-6">
                   {/* Email */}
@@ -34,7 +34,7 @@ function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium text-black mb-1">Email</h3>
+                      <h3 className="font-medium  mb-1">Email</h3>
                       <p className="text-gray-600">abdulrahman.nasserx@gmail.com</p>
                     </div>
                   </div>
@@ -47,7 +47,7 @@ function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium text-black mb-1">Phone</h3>
+                      <h3 className="font-medium  mb-1">Phone</h3>
                       <p className="text-gray-600">(+20) 1277297184</p>
                     </div>
                   </div>
@@ -61,7 +61,7 @@ function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium text-black mb-1">Location</h3>
+                      <h3 className="font-medium  mb-1">Location</h3>
                       <p className="text-gray-600">Assiut, Egypt</p>
                     </div>
                   </div>
@@ -69,7 +69,7 @@ function Contact() {
 
                 {/* Social Links */}
                 <div className="mt-12">
-                  <h3 className="text-lg font-medium text-black mb-6">Connect with me</h3>
+                  <h3 className="text-lg font-medium  mb-6">Connect with me</h3>
                   <div className="flex space-x-4">
                     <a 
                       href="https://www.linkedin.com/in/abdulrahman-nasser0" 
@@ -97,11 +97,11 @@ function Contact() {
               
               {/* Contact Form */}
               <div>
-                <h2 className="text-2xl font-bold text-black mb-8">Send a Message</h2>
+                <h2 className="text-2xl font-bold  mb-8">Send a Message</h2>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-black mb-2">
+                      <label htmlFor="name" className="block text-sm font-medium  mb-2">
                         Full Name
                       </label>
                       <input 
@@ -109,11 +109,11 @@ function Contact() {
                         id="name"
                         name="name"
                         placeholder="Enter your full name" 
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent  placeholder-gray-500"
                       />
                     </div>
                     <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-black mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium  mb-2">
                         Email Address
                       </label>
                       <input 
@@ -121,13 +121,13 @@ function Contact() {
                         id="email"
                         name="email"
                         placeholder="Enter your email address" 
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent  placeholder-gray-500"
                       />
                     </div>
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-black mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium  mb-2">
                       Subject
                     </label>
                     <input 
@@ -135,12 +135,12 @@ function Contact() {
                       id="subject"
                       name="subject"
                       placeholder="What's this about?" 
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent  placeholder-gray-500"
                     />
                   </div>
                   
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-black mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium  mb-2">
                       Message
                     </label>
                     <textarea 
@@ -148,7 +148,7 @@ function Contact() {
                       name="message"
                       placeholder="Tell me about your project or just say hello!" 
                       rows="6"
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-black placeholder-gray-500 resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent  placeholder-gray-500 resize-none"
                     ></textarea>
                   </div>
                   
@@ -166,7 +166,7 @@ function Contact() {
           {/* Additional Info */}
           <ContentSlideUp delay={1.2}>
             <div className="mt-16 bg-gray-50 rounded-lg p-8 text-center">
-              <h3 className="text-xl font-bold text-black mb-4">Looking for collaboration?</h3>
+              <h3 className="text-xl font-bold  mb-4">Looking for collaboration?</h3>
               <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
                 I'm always open to discussing new opportunities, whether it's a freelance project, 
                 full-time position, or just a chat about technology and development.
@@ -182,7 +182,7 @@ function Contact() {
                   href="https://www.linkedin.com/in/abdulrahman-nasser0" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="inline-block border-2 border-black text-black px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
+                  className="inline-block border-2 border-black  px-6 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
                 >
                   Connect on LinkedIn
                 </a>

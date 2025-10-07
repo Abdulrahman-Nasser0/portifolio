@@ -12,7 +12,7 @@ function About() {
           {/* Header Section */}
           <StaggeredSlideUp staggerDelay={0.15} initialDelay={0.5}>
             <div className="text-center mb-16">
-              <h1 className="text-4xl lg:text-5xl font-bold text-black mb-6">About Me</h1>
+              <h1 className="text-4xl lg:text-5xl font-bold  mb-6">About Me</h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 A passionate Computer Science student with a strong foundation in software engineering 
                 and a love for creating innovative web solutions.
@@ -34,12 +34,12 @@ function About() {
                 </div>
                 
                 <div className="bg-gray-50 p-6 rounded-lg">
-                  <h3 className="text-xl font-bold text-black mb-4">Quick Info</h3>
+                  <h3 className="text-xl font-bold  mb-4">Quick Info</h3>
                   <div className="space-y-2 text-gray-600">
-                    <p><span className="font-medium text-black">Location:</span> Assiut, Egypt</p>
-                    <p><span className="font-medium text-black">University:</span> Assiut University</p>
-                    <p><span className="font-medium text-black">Major:</span> Software Engineering</p>
-                    <p><span className="font-medium text-black">GPA:</span> 3.41/4.0</p>
+                    <p><span className="font-medium ">Location:</span> Assiut, Egypt</p>
+                    <p><span className="font-medium ">University:</span> Assiut University</p>
+                    <p><span className="font-medium ">Major:</span> Software Engineering</p>
+                    <p><span className="font-medium ">GPA:</span> 3.41/4.0</p>
                   </div>
                 </div>
               </div>
@@ -47,7 +47,7 @@ function About() {
               {/* Right Column - About Text */}
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-2xl font-bold text-black mb-4">My Journey</h2>
+                  <h2 className="text-2xl font-bold  mb-4">My Journey</h2>
                   <p className="text-gray-600 mb-4">
                     I'm currently pursuing a Bachelor's degree in Computer Science at Assiut University, 
                     with a specialization in Software Engineering. My academic journey has been complemented 
@@ -61,7 +61,7 @@ function About() {
                 </div>
 
                 <div>
-                  <h2 className="text-2xl font-bold text-black mb-4">What I Do</h2>
+                  <h2 className="text-2xl font-bold  mb-4">What I Do</h2>
                   <p className="text-gray-600 mb-4">
                     I specialize in frontend development with a focus on creating responsive, 
                     user-friendly web applications. My expertise spans from modern React applications 
@@ -79,13 +79,13 @@ function About() {
           {/* Experience Section */}
           <ContentSlideUp delay={1.2}>
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-black text-center mb-12">Experience & Achievements</h2>
+              <h2 className="text-3xl font-bold  text-center mb-12">Experience & Achievements</h2>
               
               <div className="space-y-8">
                 {/* ICPC Experience */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <h3 className="text-xl font-bold text-black">ICPC Competition Member</h3>
+                    <h3 className="text-xl font-bold ">ICPC Competition Member</h3>
                     <span className="text-blue-500 font-medium">Mar 2023 – Aug 2023</span>
                   </div>
                   <p className="text-gray-600 mb-3">ECPC 2023, Alexandria, Egypt</p>
@@ -99,7 +99,7 @@ function About() {
                 {/* Leadership Experience */}
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <h3 className="text-xl font-bold text-black">Team Lead - Leadership Development Camp</h3>
+                    <h3 className="text-xl font-bold ">Team Lead - Leadership Development Camp</h3>
                     <span className="text-blue-500 font-medium">Jul 2023 – Sep 2023</span>
                   </div>
                   <p className="text-gray-600 mb-3">Mansurah, Egypt</p>
@@ -116,12 +116,12 @@ function About() {
           {/* Skills Section */}
           <ContentSlideUp delay={1.4}>
             <div className="mb-16">
-              <h2 className="text-3xl font-bold text-black text-center mb-12">Technical Skills</h2>
+              <h2 className="text-3xl font-bold  text-center mb-12">Technical Skills</h2>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Programming Languages */}
                 <div className="bg-gray-50 p-6 rounded-lg text-center">
-                  <h3 className="text-lg font-bold text-black mb-4">Languages</h3>
+                  <h3 className="text-lg font-bold  mb-4">Languages</h3>
                   <div className="space-y-2 text-gray-600">
                     <p>JavaScript</p>
                     <p>C++</p>
@@ -133,7 +133,7 @@ function About() {
 
                 {/* Frameworks */}
                 <div className="bg-gray-50 p-6 rounded-lg text-center">
-                  <h3 className="text-lg font-bold text-black mb-4">Frameworks</h3>
+                  <h3 className="text-lg font-bold  mb-4">Frameworks</h3>
                   <div className="space-y-2 text-gray-600">
                     <p>React</p>
                     <p>Flask</p>
@@ -145,7 +145,7 @@ function About() {
 
                 {/* Tools */}
                 <div className="bg-gray-50 p-6 rounded-lg text-center">
-                  <h3 className="text-lg font-bold text-black mb-4">Tools</h3>
+                  <h3 className="text-lg font-bold  mb-4">Tools</h3>
                   <div className="space-y-2 text-gray-600">
                     <p>Git & GitHub</p>
                     <p>Docker</p>
@@ -157,7 +157,7 @@ function About() {
 
                 {/* Concepts */}
                 <div className="bg-gray-50 p-6 rounded-lg text-center">
-                  <h3 className="text-lg font-bold text-black mb-4">Concepts</h3>
+                  <h3 className="text-lg font-bold  mb-4">Concepts</h3>
                   <div className="space-y-2 text-gray-600">
                     <p>Data Structures</p>
                     <p>Algorithms</p>
@@ -173,7 +173,7 @@ function About() {
           {/* Call to Action */}
           <ContentSlideUp delay={1.6}>
             <div className="text-center">
-              <h2 className="text-2xl font-bold text-black mb-4">Let's Work Together</h2>
+              <h2 className="text-2xl font-bold  mb-4">Let's Work Together</h2>
               <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
                 I'm always excited to take on new challenges and collaborate on interesting projects. 
                 Feel free to reach out if you'd like to work together!
@@ -189,7 +189,7 @@ function About() {
                 <MagneticButton 
                   to="/contact" 
                   intensity={0.4}
-                  className="inline-block border-2 border-black text-black px-8 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
+                  className="inline-block border-2 border-black  px-8 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors"
                 >
                   Get In Touch
                 </MagneticButton>

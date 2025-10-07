@@ -3,7 +3,7 @@
 
 /*  Color System */
 :root {
-  --main-black: #1C1D20;
+  --color-text: #1C1D20;
   --gray-light: #999d9e;
 }
 
@@ -47,6 +47,7 @@ body {
   font-family: 'Neue Montreal', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
   line-height: 1.6;
   background-color: var(--gray-light);
+  color: var(--color-text);
   box-sizing: border-box;
   color: white;
 }
