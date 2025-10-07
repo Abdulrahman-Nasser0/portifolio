@@ -24,17 +24,35 @@ function Home() {
               <StaggeredSlideUp staggerDelay={0.15} initialDelay={0.5}>
                 <div className="mb-6">
                   <p className="text-lg text-gray-300 mb-2">Hello, I'm</p>
-                  <AnimatedText 
-                    text="Abdulrahman"
-                    className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 block"
-                    delay={0.8}
-                  />
+                  <div className="relative inline-block">
+                    <AnimatedText 
+                      text="Abdulrahman"
+                      className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 block"
+                      delay={0.8}
+                    />
+                    {/* Animated light line under Abdulrahman */}
+                    <div className="absolute bottom-2 left-0 w-full h-0.5 overflow-hidden">
+                      <div className="h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-80 animate-[slideLight_3s_ease-in-out_infinite_1.5s]"></div>
+                    </div>
+                    {/* Additional glow effect */}
+                    <div className="absolute bottom-2 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400/60 to-transparent animate-pulse opacity-60"></div>
+                  </div>
                   <AnimatedText 
                     text="Nasser"
                     className="text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 block"
                     delay={1.2}
                   />
                 </div>
+                
+                {/* CSS for sliding light animation */}
+                <style jsx>{`
+                  @keyframes slideLight {
+                    0% { transform: translateX(-100%); opacity: 0; }
+                    10% { opacity: 1; }
+                    90% { opacity: 1; }
+                    100% { transform: translateX(100%); opacity: 0; }
+                  }
+                `}</style>
                 
                 <div className="mb-8">
                   <TypingEffect 
