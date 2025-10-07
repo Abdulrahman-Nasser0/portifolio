@@ -151,23 +151,49 @@ function Home() {
       {/* Content Sections - White Background */}
       <div className="bg-white">
         <ContentSlideUp delay={1.5}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <div className="max-w-[99rem] mx-auto px-4 sm:px-6 lg:px-8 py-24">
             
+
+
+
             {/* About Preview Section */}
-            <section className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold  mb-6">About Me</h2>
-              <p className="text-lg  max-w-3xl mx-auto mb-8">
-                Computer Science student at Assiut University with a passion for frontend development. 
-                I specialize in React, JavaScript, and modern web technologies to create engaging user experiences.
-              </p>
-              <MagneticButton 
-                to="/about" 
-                variant='primary'
-              >
-                Learn More About Me
-              </MagneticButton>
+            <section className="mb-16 lg:mb-24 grid lg:grid-cols-2 gap-4 lg:gap-16">
+                {/* Left side -  statement */}
+                <div className="">
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl leading-snug mb-6 lg:mb-8">
+                    Helping brands to stand out in the digital era. 
+                    Together we will set the new status quo. No 
+                    nonsense, always on the cutting edge.
+                  </h2>
+                </div>
+                
+                {/* Right side - About me circle and text */}
+                <div className="flex flex-col justify-between">
+                  <p className="text-base lg:text-lg mb-6 mt-3  lg:mb-8 max-w-sm lg:max-w-md">
+                    The combination of my passion for design, code & interaction 
+                    positions me in a unique place in the web design world.
+                  </p>
+                  
+                  {/* Circular About me button - Ghost variant */}
+                  <div className="relative self-end">
+                    <MagneticButton 
+                      to="/about" 
+                      variant="ghost"
+                      className="w-40 h-40 sm:w-44 sm:h-44 lg:w-48 lg:h-48 border-2 border-black text-black rounded-full flex items-center justify-center text-base lg:text-lg font-medium hover:bg-black hover:text-white transition-all duration-300 ease-out"
+                      intensity={0.3}
+                    >
+                      About
+                    </MagneticButton>
+                  </div>
+                </div>
             </section>
 
+
+
+
+                  <p className="text-gray-500 text-xs sm:text-sm uppercase tracking-wider font-medium">
+                    RECENT WORK
+                  </p>
             {/* Skills Preview */}
             <section className="mb-16">
               <h2 className="text-3xl lg:text-4xl fon text-center mb-12">Skills & Technologies</h2>
