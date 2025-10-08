@@ -6,13 +6,25 @@ import { Preloader } from './index';
 
 /** @param {import('react').PropsWithChildren<{ duration?: number }>} */
 export function TransitionWrapper({ children, duration = 1000 }) {
-  const [isLoading, setLoading] = useState(true);
+  // Skip this wrapper's preloader the very first time a route mounts (after the app-level preloader)
+  let skipPreloader = false;
+  if (typeof window !== 'undefined') {
+    if (!window.__ROUTE_HAS_RENDERED_ONCE) {
+      // first route render after initial app preloader
+      window.__ROUTE_HAS_RENDERED_ONCE = true;
+      skipPreloader = true;
+    }
+  }
+
+  const [isLoading, setLoading] = useState(!skipPreloader);
 
   useTimeOut({
     callback: () => {
-      setLoading(false);
-      if (typeof window !== 'undefined') {
-        window.scrollTo(0, 0);
+      if (!skipPreloader) {
+        setLoading(false);
+        if (typeof window !== 'undefined') {
+          window.scrollTo(0, 0);
+        }
       }
     },
     duration,

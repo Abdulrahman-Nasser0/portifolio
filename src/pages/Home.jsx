@@ -1,4 +1,4 @@
-import { TransitionWrapper } from '../components/loading/transition-wrapper';
+import { TransitionWrapper } from '../components/transition/transition-wrapper';
 import { StaggeredSlideUp, ContentSlideUp, PhotoReveal } from '../components/animation';
 import { MagneticButton } from '../components/ui/magnetic-button';
 import { ImageWithLoader } from '../components/ui/image-with-loader';
@@ -9,7 +9,7 @@ import { TypingEffect } from '../components/ui/typing-effect';
 
 function Home() {
   return (
-    <>
+    <TransitionWrapper>
       {/* Hero Section - Gradient Background */}
       <section className="min-h-screen bg-gradient-to-br from-[var(--gray-light)] via-[#5c7796] to-[#7a8287] flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background */}
@@ -231,7 +231,7 @@ function Home() {
           </div>
         </ContentSlideUp>
       </div>
-    </>
+    </TransitionWrapper>
   );
 }
 
