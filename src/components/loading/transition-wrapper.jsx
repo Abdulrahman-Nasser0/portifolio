@@ -19,7 +19,7 @@ export function TransitionWrapper({ children, duration = 2000 }) {
   });
 
   return (
-    <div className='overflow-hidden'>
+    <div className='overflow-hidden z-50'>
       <AnimatePresence mode='wait'>
         {isLoading ? <Preloader /> : null}
       </AnimatePresence>

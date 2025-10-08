@@ -5,6 +5,7 @@ import { Header } from './header';
 import { Offcanvas } from './offcanvas';
 import { FloatingMenuButton } from '../ui/floating-menu-button';
 import { useLenis } from "../hooks/use-lenis";
+import { TransitionWrapper } from '../loading/transition-wrapper';
 
 function Layout() {
   // Initialize smooth scrolling
@@ -35,6 +36,7 @@ function Layout() {
   }, [isMenuOpen]);
 
   return (
+    <TransitionWrapper>
     <div className="min-h-screen">
       <Header onMenuToggle={handleMenuToggle} />
       <main>
@@ -56,6 +58,7 @@ function Layout() {
         )}
       </AnimatePresence>
     </div>
+    </TransitionWrapper>
   );
 }
 
